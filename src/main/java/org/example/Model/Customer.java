@@ -3,12 +3,14 @@ package org.example.Model;
 public class Customer {
     private String id;
     private String firstname;
+    private String lastname;
     private String address;
     private String email;
 
-    public Customer(String id, String firstname, String address, String email) {
+    public Customer(String id, String firstname, String lastname, String address, String email) {
         this.id = id;
         this.firstname = firstname;
+        this.lastname = lastname;
         this.address = address;
         this.email = email;
     }
@@ -21,6 +23,10 @@ public class Customer {
         return firstname;
     }
 
+    public String getLastname() {
+        return lastname;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -28,5 +34,4 @@ public class Customer {
     public String getEmail() {
         return email;
     }
-
 }

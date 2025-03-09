@@ -1,5 +1,7 @@
 package org.example.Model;
 
+import org.example.Controller.WebshopController;
+
 public class Pants extends Clothing{
     public String fit;
     public String length;
@@ -8,6 +10,6 @@ public class Pants extends Clothing{
 
     @Override
     public void showDetails() {
-        System.out.println("Byxor detaljer: " + material + ", Storlek: " + size + ", Färg: " + color + ", Fit: " + fit + ", Längd: " + length + ", Pris: " + price + " SEK");
+        System.out.println("Byxor detaljer: " + type + ", " +  material + ", Storlek: " + size + ", Färg: " + color + ", Fit: " + fit + ", Längd: " + length + ", Pris: " + price + " SEK");
     }
 }

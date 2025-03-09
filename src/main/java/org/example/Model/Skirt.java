@@ -9,7 +9,7 @@ public class Skirt extends Clothing{
 
    @Override
    public void showDetails() {
-        System.out.println("Kjol detalj: " + material + ", " + size + ", " + color + ", Midjemått: " + waistline + ", Mönster: " + pattern + ", Pris: " + price + " SEK");
+        System.out.println("Kjol detalj: "+ type + ", " + material + ", " + size + ", " + color + ", Midjemått: " + waistline + ", Mönster: " + pattern + ", Pris: " + price + " SEK");
 
     }
 }

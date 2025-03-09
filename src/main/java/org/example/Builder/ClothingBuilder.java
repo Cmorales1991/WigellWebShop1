@@ -36,7 +36,12 @@ public class ClothingBuilder {
         clothing.color = color;
         return this;
     }
-    
+
+    public ClothingBuilder setType(String type) {
+        clothing.type = type;
+        return this;
+    }
+
     public Clothing build() {
         return clothing;
     }

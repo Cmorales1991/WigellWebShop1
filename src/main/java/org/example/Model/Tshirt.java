@@ -8,6 +8,6 @@ public class Tshirt extends Clothing{
 
    @Override
    public void showDetails() {
-       System.out.println("TShirt detaljer: " + material + ", " + size + ", " + ", " + color + ", Nackform: " + neck + ", Ärmlängd: " + sleeves + ", Pris: " + price + " SEK");
+       System.out.println("TShirt detaljer: " + type + ", " + material + ", " + size + ", " + ", " + color + ", Nackform: " + neck + ", Ärmlängd: " + sleeves + ", Pris: " + price + " SEK");
    }
 }

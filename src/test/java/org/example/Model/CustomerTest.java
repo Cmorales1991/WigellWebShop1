@@ -8,7 +8,7 @@ class CustomerTest {
 
     @Test
     void testCreateCustomer() {
-        Customer customer = new Customer("007","Christoffer", "Kista", "Christoffer@gmail.com");
+        Customer customer = new Customer("007","Christoffer","Morales", "Kista", "Christoffer@gmail.com");
         assertEquals("007", customer.getId());
         assertEquals("Christoffer", customer.getFirstname());
         assertEquals("Kista", customer.getAddress());
