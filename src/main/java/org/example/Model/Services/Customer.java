@@ -1,4 +1,4 @@
-package org.example.Model;
+package org.example.Model.Services;
 
 public class Customer {
     private String id;

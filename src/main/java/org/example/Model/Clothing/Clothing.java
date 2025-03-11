@@ -1,4 +1,4 @@
-package org.example.Model;
+package org.example.Model.Clothing;
 
 public abstract class Clothing {
     public String type;

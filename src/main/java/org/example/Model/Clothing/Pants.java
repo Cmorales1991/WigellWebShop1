@@ -1,8 +1,6 @@
-package org.example.Model;
+package org.example.Model.Clothing;
 
-import org.example.Controller.WebshopController;
-
-public class Pants extends Clothing{
+public class Pants extends Clothing {
     public String fit;
     public String length;
     public double price = 500;

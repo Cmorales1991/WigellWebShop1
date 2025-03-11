@@ -1,9 +1,9 @@
-package org.example.Builder;
+package org.example.Controller.Builder;
 
-import org.example.Model.Clothing;
-import org.example.Model.Pants;
-import org.example.Model.Skirt;
-import org.example.Model.Tshirt;
+import org.example.Model.Clothing.Clothing;
+import org.example.Model.Clothing.Pants;
+import org.example.Model.Clothing.Skirt;
+import org.example.Model.Clothing.Tshirt;
 
 public class ClothingBuilder {
     private Clothing clothing;

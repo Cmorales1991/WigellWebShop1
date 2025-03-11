@@ -1,8 +1,8 @@
-package org.example.Command;
+package org.example.Controller.Command;
 
 
-import org.example.Model.Clothing;
-import org.example.Model.Pants;
+import org.example.Model.Clothing.Clothing;
+import org.example.Model.Clothing.Pants;
 
 public class SetFitCommand implements ClothingCommand {
     private String fit;

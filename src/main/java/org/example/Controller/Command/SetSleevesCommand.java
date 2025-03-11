@@ -1,7 +1,7 @@
-package org.example.Command;
+package org.example.Controller.Command;
 
-import org.example.Model.Clothing;
-import org.example.Model.Tshirt;
+import org.example.Model.Clothing.Clothing;
+import org.example.Model.Clothing.Tshirt;
 
 public class SetSleevesCommand implements ClothingCommand{
     private String sleeves;

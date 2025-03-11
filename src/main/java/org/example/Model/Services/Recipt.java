@@ -1,4 +1,6 @@
-package org.example.Model;
+package org.example.Model.Services;
+
+import org.example.Model.Clothing.Clothing;
 
 public class Recipt {
 

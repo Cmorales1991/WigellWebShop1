@@ -1,6 +1,6 @@
-package org.example.Model;
+package org.example.Model.Clothing;
 
-public class Tshirt extends Clothing{
+public class Tshirt extends Clothing {
    public String sleeves;
    public String neck;
    public double price = 120;

@@ -1,10 +1,16 @@
 package org.example.Controller;
 
 
-import org.example.Builder.ClothingBuilder;
-import org.example.Command.*;
-import org.example.Model.*;
-import org.example.Observer.CEO;
+import org.example.Controller.Builder.ClothingBuilder;
+import org.example.Controller.Command.*;
+import org.example.Model.Services.CEO;
+import org.example.Model.Clothing.Clothing;
+import org.example.Model.Clothing.Pants;
+import org.example.Model.Clothing.Skirt;
+import org.example.Model.Clothing.Tshirt;
+import org.example.Model.Services.Customer;
+import org.example.Model.Services.Order;
+import org.example.Model.Services.Recipt;
 
 import java.util.Scanner;
 
@@ -33,7 +39,7 @@ public class WebshopController {
         //metod för att skapa order och sedan ta info från beställaren/Kunden
         private void createOrder() {
 
-            System.out.print("Ange ditt förnamn namn: ");
+            System.out.print("Ange ditt förnamn: ");
             String customerFirstName = scanner.nextLine();
 
             System.out.print("Ange ditt efternamn: ");

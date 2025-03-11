@@ -1,7 +1,7 @@
-package org.example.Command;
+package org.example.Controller.Command;
 
-import org.example.Model.Clothing;
-import org.example.Model.Skirt;
+import org.example.Model.Clothing.Clothing;
+import org.example.Model.Clothing.Skirt;
 
 public class SetPatternCommand implements ClothingCommand{
     private String pattern;

@@ -1,6 +1,7 @@
-package org.example.Model;
+package org.example.Model.Services;
 
-import org.example.Observer.OrderObserver;
+import org.example.Controller.Observer.OrderObserver;
+import org.example.Model.Clothing.Clothing;
 
 public class Order {
     private Customer customer;
