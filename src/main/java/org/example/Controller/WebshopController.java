@@ -53,7 +53,7 @@ public class WebshopController {
 
             Customer customer = new Customer("1", customerFirstName,customerLastName, customerAddress, customerMail);
 
-            System.out.println("Välj plagg: (byxor/tshirt/kjol)");
+            System.out.println("Välj plagg: (Byxor/Tshirt/Kjol)");
             String type = scanner.nextLine();
 
             System.out.println("Välj material: (Bomull/Jeans/Linne)");
