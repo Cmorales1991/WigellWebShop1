@@ -1,10 +1,35 @@
 package org.example.Model.Clothing;
 
 public class Tshirt extends Clothing {
-   public String sleeves;
-   public String neck;
-   public double price = 120;
+   private String sleeves;
+   private String neck;
+   private double price = 120;
    // pris double
+
+
+   public String getSleeves() {
+      return sleeves;
+   }
+
+   public void setSleeves(String sleeves) {
+      this.sleeves = sleeves;
+   }
+
+   public String getNeck() {
+      return neck;
+   }
+
+   public void setNeck(String neck) {
+      this.neck = neck;
+   }
+
+   public double getPrice() {
+      return price;
+   }
+
+   public void setPrice(double price) {
+      this.price = price;
+   }
 
    @Override
    public void showDetails() {

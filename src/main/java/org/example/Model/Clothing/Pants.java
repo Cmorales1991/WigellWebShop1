@@ -1,10 +1,35 @@
 package org.example.Model.Clothing;
 
 public class Pants extends Clothing {
-    public String fit;
-    public String length;
-    public double price = 500;
+    private String fit;
+    private String length;
+    private double price = 500;
     // pris double
+
+
+    public String getFit() {
+        return fit;
+    }
+
+    public void setFit(String fit) {
+        this.fit = fit;
+    }
+
+    public String getLength() {
+        return length;
+    }
+
+    public void setLength(String length) {
+        this.length = length;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     @Override
     public void showDetails() {

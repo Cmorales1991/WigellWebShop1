@@ -13,7 +13,7 @@ public class SetWaistlineCommand implements ClothingCommand{
     @Override
     public void execute(Clothing clothing) {
         if (clothing instanceof Skirt) {
-            ((Skirt) clothing).waistline = waistline;
+            ((Skirt) clothing).setWaistline(waistline);
         }
     }
 }

@@ -13,7 +13,7 @@ public class SetSleevesCommand implements ClothingCommand{
     @Override
     public void execute(Clothing clothing) {
         if (clothing instanceof Tshirt) {
-            ((Tshirt) clothing).sleeves = sleeves;
+            ((Tshirt) clothing).setSleeves(sleeves);
         }
     }
 }

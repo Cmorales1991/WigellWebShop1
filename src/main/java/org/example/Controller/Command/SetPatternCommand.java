@@ -13,7 +13,7 @@ public class SetPatternCommand implements ClothingCommand{
     @Override
     public void execute(Clothing clothing) {
         if (clothing instanceof Skirt) {
-            ((Skirt) clothing).pattern = pattern;
+            ((Skirt) clothing).setPattern(pattern);
         }
     }
 }

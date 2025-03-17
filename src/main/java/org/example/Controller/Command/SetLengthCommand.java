@@ -14,7 +14,7 @@ public class SetLengthCommand implements ClothingCommand{
     @Override
     public void execute(Clothing clothing) {
         if (clothing instanceof Pants) {
-            ((Pants) clothing).length = length;
+            ((Pants) clothing).setLength(length);
         }
     }
 }

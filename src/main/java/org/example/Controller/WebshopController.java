@@ -12,15 +12,16 @@ import org.example.Model.Services.Customer;
 import org.example.Model.Services.Order;
 import org.example.Model.Services.Recipt;
 
+import java.util.Observer;
 import java.util.Scanner;
 
 public class WebshopController {
     // Logiken
+    Scanner scanner = new Scanner(System.in);
+    CEO ceo = new CEO();
+    Observer observer = (Observer) new CEO();
 
-         Scanner scanner = new Scanner(System.in);
-         CEO ceo = new CEO();
-
-         //metod för att visa meny och dens val
+    //metod för att visa meny och dens val
         public void displayMenu() {
             System.out.println("Välkommen till Wigells webshop!");
             System.out.println("1. Skapa en beställning");
@@ -76,8 +77,10 @@ public class WebshopController {
             //sedan anpassar med commandmönster
             applyCustoms(clothing);
 
-            // Skapa order och meddela VD med observermönster
-            Order order = new Order(customer, clothing, ceo);
+            // Skapa order och lägger till CEO och meddelar CEO med observermönster... när det tillverkas och är klart..
+            Order order = new Order(customer, clothing);
+            order.addObserver(ceo);
+            order.startProduction();
             order.completeOrder();
 
             //utskrift av kvitto
@@ -87,32 +90,35 @@ public class WebshopController {
 
         //Metod för att skapa anpassningar sedan  skapar o kör commando för anpassning för respektive typ
         private void applyCustoms(Clothing clothing) {
+            CommandPipeline commandPipeline = new CommandPipeline();
+
             if (clothing instanceof Pants) {
                 System.out.println("Ange passform (Slim/Regular): ");
                 String fit = scanner.nextLine();
-                new SetFitCommand(fit).execute(clothing);
+                commandPipeline.addCommand(new SetFitCommand(fit));
 
                 System.out.println("Ange längd (Kort/Lång): ");
                 String length = scanner.nextLine();
-                new SetLengthCommand(length).execute(clothing);
+                commandPipeline.addCommand(new SetLengthCommand(length));
             }
             if (clothing instanceof Tshirt) {
                 System.out.println("Ange nacke (Rund/V-ringad): ");
                 String neck = scanner.nextLine();
-                new SetNeckCommand(neck).execute(clothing);
+                commandPipeline.addCommand(new SetNeckCommand(neck));
 
                 System.out.println("Ange ärmlängd (Kort/Lång): ");
                 String sleeves = scanner.nextLine();
-                new SetSleevesCommand(sleeves).execute(clothing);
+                commandPipeline.addCommand(new SetSleevesCommand(sleeves));
             }
             if (clothing instanceof Skirt) {
                 System.out.println("Ange midja (Hög/Låg): ");
                 String waistline = scanner.nextLine();
-                new SetWaistlineCommand(waistline).execute(clothing);
+                commandPipeline.addCommand(new SetWaistlineCommand(waistline));
 
                 System.out.println("Ange mönster (Blommigt/Enfärgat): ");
                 String pattern = scanner.nextLine();
-                new SetPatternCommand(pattern).execute(clothing);
+                commandPipeline.addCommand(new SetPatternCommand(pattern));
             }
+            commandPipeline.executeCommands(clothing);
         }
 }

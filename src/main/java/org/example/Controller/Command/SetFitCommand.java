@@ -14,7 +14,7 @@ public class SetFitCommand implements ClothingCommand {
     @Override
     public void execute(Clothing clothing) {
         if (clothing instanceof Pants) {
-            ((Pants) clothing).fit = fit;
+            ((Pants) clothing).setFit(fit);
         }
     }
 }

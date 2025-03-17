@@ -13,7 +13,7 @@ public class SetNeckCommand implements ClothingCommand{
     @Override
     public void execute(Clothing clothing) {
         if (clothing instanceof Tshirt) {
-            ((Tshirt) clothing).neck = neck;
+            ((Tshirt) clothing).setNeck(neck);
         }
     }
 }
